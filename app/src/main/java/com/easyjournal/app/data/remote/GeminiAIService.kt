@@ -8,7 +8,7 @@ import kotlinx.coroutines.withContext
 class GeminiAIService {
     private val model = GenerativeModel(
         modelName = "gemini-pro",
-        apiKey = System.getenv("GEMINI_API_KEY") ?: "YOUR_GEMINI_API_KEY_HERE"
+        apiKey = "AIzaSyBDUsrorlx7oI9hQj8dn54ODTWyK0v_uUQ"
     )
 
     suspend fun generateSummary(prompt: String): String = withContext(Dispatchers.IO) {
