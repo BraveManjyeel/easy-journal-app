@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Easy</string>
+    
+    <!-- Daily Questions -->
+    <string name="question_1">What made you smile today?</string>
+    <string name="question_2">What\'s one thing you\'re grateful for?</string>
+    <string name="question_3">What challenged you today?</string>
+    <string name="question_4">How are you feeling right now?</string>
+    <string name="question_5">What would make tomorrow better?</string>
+    <string name="question_6">What\'s something you learned today?</string>
+    <string name="question_7">What\'s your biggest win today?</string>
+    <string name="question_8">What\'s something you\'re looking forward to?</string>
+    <string name="question_9">What\'s one thing you\'d like to improve?</string>
+    <string name="question_10">What made you feel proud today?</string>
+    <string name="question_11">What\'s something that made you laugh?</string>
+    <string name="question_12">What\'s your biggest worry right now?</string>
+    <string name="question_13">What\'s something you\'re excited about?</string>
+    <string name="question_14">What\'s one thing you\'re proud of?</string>
+    <string name="question_15">What\'s something you\'re curious about?</string>
+    <string name="question_16">What\'s your biggest goal right now?</string>
+    <string name="question_17">What\'s something that inspired you?</string>
+    <string name="question_18">What\'s one thing you\'d like to change?</string>
+    <string name="question_19">What\'s something you\'re thankful for?</string>
+    <string name="question_20">What\'s your biggest fear?</string>
+    <string name="question_21">What\'s something you\'re passionate about?</string>
+    <string name="question_22">What\'s one thing you\'d like to learn?</string>
+    <string name="question_23">What\'s something that made you think?</string>
+    <string name="question_24">What\'s your biggest dream?</string>
+    <string name="question_25">What\'s something you\'re working on?</string>
+    <string name="question_26">What\'s one thing you\'d like to achieve?</string>
+    <string name="question_27">What\'s something that made you happy?</string>
+    <string name="question_28">What\'s your biggest strength?</string>
+    <string name="question_29">What\'s something you\'re hopeful about?</string>
+    <string name="question_30">What\'s one thing you\'d like to remember?</string>
+    
+    <!-- UI Text -->
+    <string name="hint_answer">Write your reflection here...</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_view_summary">View Monthly Summary</string>
+    <string name="btn_export">Export Summary</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_next">Next</string>
+    
+    <!-- Summary Screen -->
+    <string name="title_monthly_summary">Monthly Summary</string>
+    <string name="title_mood_graph">Your Mood Journey</string>
+    <string name="title_word_cloud">Common Themes</string>
+    <string name="title_ai_summary">AI Reflection</string>
+    <string name="loading_summary">Generating your monthly reflection...</string>
+    
+    <!-- Messages -->
+    <string name="msg_saved">Reflection saved!</string>
+    <string name="msg_updated">Reflection updated!</string>
+    <string name="msg_error_saving">Error saving reflection</string>
+    <string name="msg_no_entries">No entries yet. Start your journaling journey!</string>
+    <string name="msg_need_30_days">Complete 30 days to see your monthly summary</string>
+    
+    <!-- Affirmations -->
+    <string name="affirmation_1">Every day is a new beginning</string>
+    <string name="affirmation_2">You are stronger than you think</string>
+    <string name="affirmation_3">Your feelings are valid</string>
+    <string name="affirmation_4">You are making progress</string>
+    <string name="affirmation_5">You deserve peace and happiness</string>
+    <string name="affirmation_6">Your journey is unique and beautiful</string>
+    <string name="affirmation_7">You have the power to change</string>
+    <string name="affirmation_8">Every experience teaches you something</string>
+    <string name="affirmation_9">You are enough</string>
+    <string name="affirmation_10">Your story matters</string>
+</resources> 

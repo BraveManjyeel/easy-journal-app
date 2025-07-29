@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.EasyJournal" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        
+        <!-- Background colors -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        
+        <!-- Custom attributes -->
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="accentBlue">@color/accent_blue</item>
+        <item name="accentLavender">@color/accent_lavender</item>
+        <item name="accentMint">@color/accent_mint</item>
+        <item name="accentPeach">@color/accent_peach</item>
+        <item name="accentCoral">@color/accent_coral</item>
+        
+        <!-- Typography -->
+        <item name="android:fontFamily">@font/nunito</item>
+    </style>
+</resources> 
