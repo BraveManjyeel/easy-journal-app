@@ -30,7 +30,6 @@ import com.easyjournal.app.ui.state.JournalUiState
 import com.easyjournal.app.ui.theme.AccentLavender
 import com.easyjournal.app.ui.theme.AccentMint
 import com.easyjournal.app.ui.theme.AccentPeach
-import com.google.firebase.analytics.FirebaseAnalytics
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -62,13 +61,7 @@ fun DailyReflectionScreen(
         affirmations[LocalDate.now().dayOfYear % affirmations.size]
     }
 
-    // Track screen view
-    LaunchedEffect(Unit) {
-        FirebaseAnalytics.getInstance(context).logEvent("screen_view") {
-            param("screen_name", "daily_reflection")
-            param("screen_class", "DailyReflectionScreen")
-        }
-    }
+
 
     Column(
         modifier = modifier
@@ -186,8 +179,6 @@ fun DailyReflectionScreen(
                         keyboardActions = KeyboardActions(
                             onDone = {
                                 if (uiState.currentAnswer.isNotBlank()) {
-                                    // Track save attempt
-                                    FirebaseAnalytics.getInstance(context).logEvent("save_attempted", null)
                                     onEvent(JournalEvent.SaveEntry(uiState.currentQuestion, uiState.currentAnswer))
                                 }
                             }
@@ -215,8 +206,6 @@ fun DailyReflectionScreen(
                         Button(
                             onClick = {
                                 if (uiState.currentAnswer.isNotBlank()) {
-                                    // Track save button click
-                                    FirebaseAnalytics.getInstance(context).logEvent("save_button_clicked", null)
                                     onEvent(JournalEvent.SaveEntry(uiState.currentQuestion, uiState.currentAnswer))
                                 }
                             },
@@ -276,8 +265,6 @@ fun DailyReflectionScreen(
         ) {
             OutlinedButton(
                 onClick = { 
-                    // Track summary button click
-                    FirebaseAnalytics.getInstance(context).logEvent("summary_button_clicked", null)
                     onEvent(JournalEvent.LoadMonthlySummary)
                     // Navigate to summary screen - this would need to be handled by the parent
                 },

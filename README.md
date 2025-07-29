@@ -90,9 +90,8 @@ app/src/main/java/com/easyjournal/app/
    - Navigate to the project directory and select it
 
 3. **Configure Gemini AI API**
-   - Get a Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-   - The API key is automatically read from environment variables
-   - For local development, set `GEMINI_API_KEY` environment variable
+   - The Gemini API key is already configured in the code
+   - For production, replace the API key in `GeminiAIService.kt`
 
 4. **Build and Run**
    - Connect an Android device or start an emulator

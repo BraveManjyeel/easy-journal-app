@@ -4,7 +4,6 @@ import com.easyjournal.app.data.local.JournalDao
 import com.easyjournal.app.data.model.JournalEntry
 import com.easyjournal.app.data.model.Mood
 import com.easyjournal.app.data.remote.GeminiAIService
-import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.coroutines.flow.Flow
 import java.time.LocalDate
 import javax.inject.Inject
@@ -21,23 +20,14 @@ class JournalRepository @Inject constructor(
 
     suspend fun saveEntry(entry: JournalEntry) {
         journalDao.insertEntry(entry)
-        
-        // Track analytics
-        trackJournalEntry(entry)
     }
 
     suspend fun updateEntry(entry: JournalEntry) {
         journalDao.updateEntry(entry)
-        
-        // Track analytics
-        trackJournalEntry(entry, isUpdate = true)
     }
 
     suspend fun deleteEntry(entry: JournalEntry) {
         journalDao.deleteEntry(entry)
-        
-        // Track analytics
-        FirebaseAnalytics.getInstance(null).logEvent("journal_entry_deleted", null)
     }
 
     suspend fun getLast30Entries(): List<JournalEntry> = journalDao.getLast30Entries()
@@ -52,15 +42,8 @@ class JournalRepository @Inject constructor(
         
         return try {
             val summary = geminiAIService.generateSummary(prompt)
-            
-            // Track successful summary generation
-            FirebaseAnalytics.getInstance(null).logEvent("summary_generated", null)
-            
             summary
         } catch (e: Exception) {
-            // Track failed summary generation
-            FirebaseAnalytics.getInstance(null).logEvent("summary_failed", null)
-            
             "Unable to generate AI summary at this time. Please try again later."
         }
     }
@@ -78,20 +61,10 @@ class JournalRepository @Inject constructor(
         val positiveCount = words.count { it in positiveWords }
         val negativeCount = words.count { it in negativeWords }
 
-        val mood = when {
+        return when {
             positiveCount > negativeCount -> Mood.POSITIVE
             negativeCount > positiveCount -> Mood.NEGATIVE
             else -> Mood.NEUTRAL
         }
-        
-        // Track mood analysis
-        FirebaseAnalytics.getInstance(null).logEvent("mood_analyzed", null)
-        
-        return mood
-    }
-    
-    private fun trackJournalEntry(entry: JournalEntry, isUpdate: Boolean = false) {
-        val eventName = if (isUpdate) "journal_entry_updated" else "journal_entry_saved"
-        FirebaseAnalytics.getInstance(null).logEvent(eventName, null)
     }
 } 
